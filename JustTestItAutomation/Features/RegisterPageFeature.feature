@@ -22,10 +22,10 @@ Scenario: Check user already exists
 	Then I should get message "User already exist-Enter valid Data" 
 
 	
-@Automate
+@Automate @positive
 Scenario: Check cancel button working on register page
 	Given I have navigated to the application
 	Then I click Register link
 	Then I click cancel button
-	Then I navigate to HomePage
+	Then I Should navigate to HomePage
 	

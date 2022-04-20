@@ -59,14 +59,12 @@ namespace JustTestItAutomation.Steps
             CurrentPage=CurrentPage.As<RegisterPage>().clickCancelButton();
 
         }
-
-        [Then(@"I navigate to HomePage")]
-        public void ThenINavigateToHomePage()
+        [Then(@"I Should navigate to HomePage")]
+        public void ThenIShouldNavigateToHomePage()
         {
-           Assert.That(CurrentPage.As<HomePage>().validPopuralMakeLink(),"Cancel Button is not working");
+            Assert.That(CurrentPage.As<HomePage>().validPopuralMakeLink(), "Cancel Button is not working");
         }
 
-
-
+       
     }
 }

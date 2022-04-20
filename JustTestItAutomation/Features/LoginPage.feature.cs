@@ -76,12 +76,15 @@ namespace JustTestItAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("I can login with valid username and password and Navigate to Home page")]
         [NUnit.Framework.CategoryAttribute("Automate")]
+        [NUnit.Framework.CategoryAttribute("positive")]
         public virtual void ICanLoginWithValidUsernameAndPasswordAndNavigateToHomePage()
         {
             string[] tagsOfScenario = new string[] {
-                    "Automate"};
+                    "Automate",
+                    "positive"};
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I can login with valid username and password and Navigate to Home page", null, new string[] {
-                        "Automate"});
+                        "Automate",
+                        "positive"});
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -116,6 +119,57 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 10
  testRunner.Then("I can validate user name with \"Hi, Sarika\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("I can not login with invalid username and password")]
+        [NUnit.Framework.CategoryAttribute("Automate")]
+        [NUnit.Framework.CategoryAttribute("negative")]
+        public virtual void ICanNotLoginWithInvalidUsernameAndPassword()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Automate",
+                    "negative"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I can not login with invalid username and password", null, new string[] {
+                        "Automate",
+                        "negative"});
+#line 13
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 14
+ testRunner.Given("I have navigated to the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Username",
+                            "Password"});
+                table2.AddRow(new string[] {
+                            "CCCCC",
+                            "C@cc1234"});
+#line 15
+ testRunner.And("I login with valid user", ((string)(null)), table2, "And ");
+#line hidden
+#line 18
+ testRunner.Then("I can not login and get message \"Invalid username/password\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

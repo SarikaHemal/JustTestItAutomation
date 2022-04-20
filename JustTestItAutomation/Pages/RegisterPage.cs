@@ -1,10 +1,7 @@
 ﻿using JustTestItAutomation.Extension;
 using JustTestItAutomation.Steps;
-using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace JustTestItAutomation.Pages
 {
@@ -20,7 +17,7 @@ namespace JustTestItAutomation.Pages
         private IWebElement cirfirmPasswordTextbox => Driver.WaitForElement(By.Id("confirmPassword"));
         private IWebElement regiterButton => Driver.WaitForElement(By.XPath("//button[contains(.,'Register')]"));
         private IWebElement cancelButton => Driver.WaitForElement(By.XPath("//a[contains(.,'Cancel')]"));
-        
+
         public void clickRegisterButton()
         {
             regiterButton.Submit();
@@ -43,6 +40,6 @@ namespace JustTestItAutomation.Pages
             return new HomePage(Driver);
         }
 
-
+        
     }
 }

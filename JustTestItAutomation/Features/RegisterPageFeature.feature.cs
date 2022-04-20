@@ -112,20 +112,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 9
  testRunner.Then("I click Register link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "FirstName",
                             "LastName",
                             "Password",
                             "ConfirmPassword"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Aaaa.baaa@gmail.com",
                             "Aaaa",
                             "Baaa",
                             "A@aa1234",
                             "A@aa1234"});
 #line 10
- testRunner.Then("I  Register with following Data", ((string)(null)), table2, "Then ");
+ testRunner.Then("I  Register with following Data", ((string)(null)), table3, "Then ");
 #line hidden
 #line 13
  testRunner.Then("I should get message \"Registration is successful\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -172,20 +172,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 18
  testRunner.Then("I click Register link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "FirstName",
                             "LastName",
                             "Password",
                             "ConfirmPassword"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Aaaa.baaa@gmail.com",
                             "Aaaa",
                             "Baaa",
                             "A@aa1234",
                             "A@aa1234"});
 #line 19
- testRunner.Then("I  Register with following Data", ((string)(null)), table3, "Then ");
+ testRunner.Then("I  Register with following Data", ((string)(null)), table4, "Then ");
 #line hidden
 #line 22
  testRunner.Then("I should get message \"User already exist-Enter valid Data\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -197,12 +197,15 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Check cancel button working on register page")]
         [NUnit.Framework.CategoryAttribute("Automate")]
+        [NUnit.Framework.CategoryAttribute("positive")]
         public virtual void CheckCancelButtonWorkingOnRegisterPage()
         {
             string[] tagsOfScenario = new string[] {
-                    "Automate"};
+                    "Automate",
+                    "positive"};
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check cancel button working on register page", null, new string[] {
-                        "Automate"});
+                        "Automate",
+                        "positive"});
 #line 26
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -233,7 +236,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("I click cancel button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 30
- testRunner.Then("I navigate to HomePage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I Should navigate to HomePage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

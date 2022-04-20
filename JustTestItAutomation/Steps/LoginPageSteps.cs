@@ -37,8 +37,14 @@ namespace JustTestItAutomation.Steps
             Assert.That(CurrentPage.As<HomePage>().isLogin(userName));
         }
 
+        [Then(@"I can not login and get message ""(.*)""")]
+        public void ThenICanNotLoginAndGetMessage(string message)
+        {
+            //Assert.AreEqual(message, Driver.GetMessage());
+             Assert.AreEqual(CurrentPage.As<HomePage>().getInValidUserandPasswordMessege(), message);
+        }
 
-          
+
 
 
     }

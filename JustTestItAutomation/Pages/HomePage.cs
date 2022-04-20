@@ -2,8 +2,7 @@
 using JustTestItAutomation.Steps;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace JustTestItAutomation.Pages
 {
@@ -17,6 +16,7 @@ namespace JustTestItAutomation.Pages
         private IWebElement registerLink => Driver.WaitForElement(By.XPath("//a[contains(.,'Register')]"));
         private IWebElement logOutLink => Driver.WaitForElement(By.XPath("//a[@class='nav-link'][contains(.,'Logout')]"));
         private IWebElement popuralMakeLink => Driver.WaitForElement(By.XPath("//h2[@class='card-header text-xs-center'][contains(.,'Popular Make')]"));
+        private IWebElement invadiLoginMessege => Driver.WaitForElement(By.XPath("//span[contains(.,'Invalid username/password')]"));
 
         public Boolean isLogin(string userName)
         {
@@ -36,6 +36,10 @@ namespace JustTestItAutomation.Pages
         {
             return popuralMakeLink.Displayed;
             
+        }
+        public string getInValidUserandPasswordMessege()
+        {
+            return invadiLoginMessege.Text;
         }
     }
 }
