@@ -1,0 +1,11 @@
+﻿{
+  "Name": "staging",
+  "AUT": "https://buggy.justtestit.org/",
+  "Browser": "Chrome",
+  "TestType": "SmokeTest",
+  "IsLog": "Y",
+  "LogPath": "C:\\ProjectPrac\\JustTestIt\\JustTestItAutomation\\JustTestItAutomation",
+  "ExtendReportPath": "Reports\\ExtendReport\\",
+  "ScreenshotPath": "Reports\\Screenshots",
+  "AutConnectionString": "Data Source=EAEmployeeDB.mssql.somee.com;User ID=kartmcad_SQLLogin_1;Password=wtzaxoan1l;persist security info=False;initial catalog=EAEmployeeDB"
+}
